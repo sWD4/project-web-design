@@ -79,10 +79,12 @@
     letter-spacing: 1px;
     word-spacing: 2px;
     line-height: 35px;
+    text-align: justify;
 }
 .xerox{
     font-size: 15px;
     line-height: 35px;
     letter-spacing: 1px;
     word-spacing: 2px;
+    text-align: justify;
 }

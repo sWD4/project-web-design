@@ -1,141 +1,201 @@
-<!-- Stationary shop website
-
-shiv Stationary & Books
-Assume a shop
-stationary
-xerox
-books
-print outs
-thesis
-book binding
-
--->
-
 <!doctype html>
 <html lang="en">
-
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
   <!--link css-->
   <link href="css/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
   <title>Welcome to Shiv Stationary</title>
   <style>
     .social-media>ul {
-    list-style: none;
-    padding: 11px 0 0;
-    margin: 0;
+      list-style: none;
+      padding: 11px 0 0;
+      margin: 0;
+    }
+    .navbar-nav li a {
+      color: #fff !important;
+      font-weight: 600;
+      font-size: 18px;
+    }
+    .footer-nav>ul {
+      list-style: none;
+      padding: 11px 0 0;
+      margin: 0;
+    }
+    .row {
+      margin-right: -15px;
+      margin-left: -15px;
+    }
+    .cat-image {
+      background: #fff;
+      /* border: 1px solid #eee; */
+      display: block;
+      margin-left: 53px;
+    }
+    .cat-image+.name {
+      padding: 10px;
+      font-weight: 500;
+      text-align: center;
+    }
+    .pencil {
+      padding: 63px 0 5px;
+      text-align: center
+    }
+    #loading {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: #fff url('https://www.animatedimages.org/data/media/53/animated-book-image-0050.gif') no-repeat center;
+      z-index: 10000;
+      ;
+    }
+    :root {
+      --pink: #FC5C7D;
+      --purple: #6A82FB;
+      --orange: #FF4E50;
+    }
+   .navbar {
+      background: black;
+    }
+  .weblogo {
+      align-items: center;
+      font-size: 25px;
+      text-transform: uppercase;
+      font-family: 'prague';
+      margin-left: 25px;
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+   #scrollbtn {
+      position: fixed;
+      bottom: 100px;
+      right: 20px;
+      z-index: 9;
+      font-size: 2vw;
+      border: none;
+      outline: none;
+      background-color: var(--purple);
+      color: #fff;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 8px;
+      opacity: 0.6;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+      transition: all 0.4s;
+    }
+   #scrollBtn:hover {
+      background-color: var(--orange);
+      opacity: 1;
+    }
+   .fixed-top {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1030;
+    }
+  .ch1 {
+      font-family: 'poppins';
+      font-weight: bold;
+      font-size: 56px;
+      margin-bottom: 200px;
+    }
+    a{
+    text-decoration: none;
 }
-.footer-nav>ul {
-    list-style: none;
-    padding: 11px 0 0;
-    margin: 0;
-}
-.row{
-    margin-right: -15px;
-    margin-left: -15px;
-}
-.cat-image{
-    background: #fff;
-    border: 1px solid #eee;
-    display: block;
-}
-
-.cat-image+.name {
-    padding: 10px;
-    font-weight: 500;
-    text-align: center;
-}
-.pencil{
-  padding: 63px 0 5px;
-    text-align: center;
-}
-
   </style>
 </head>
 
-<body>
+<body onload="myFun()">
+
+  <div id="loading"></div>
   <!-- our code starts here -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="index.html">Shiv Stationary</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <nav class="navbar navbar-dark navbar-expand-md fixed-top">
+    <div class="container-fluid">
+      <div class="row">
+        <a href="" class="navbar-brand">
+          <h1 class="animated infinite heartBeat weblogo">Shiv Stationary</h1>
+        </a>
+      </div>
+      <!--mobile view-->
+      <button class="navbar-toggler collapsed" data-bs-target="#a" data-bs-toggle="collapse" aria-expanded="false">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--mobile view end-->
+      <!--menu  -->
+      <div class="navbar-collapse collapse" id="a" style="">
+        <ul class="navbar-nav ms-auto ">
+          <li><a href="index.html" class="nav-link">HOME</a></li>
+          <li><a href="about.html" class="nav-link">ABOUT</a></li>
+          <li><a href="services.html" class="nav-link">OUR SERVICE</a></li>
+          <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+          <li><a href="limited edition.html" class="nav-link">LIMITED EDITION</a></li>
+          <li><a href="login.html" class="nav-link">LOGIN</a></li>
+        </ul>
+      </div>
+      <!--menu end-->
+    </div><!-- container-fluid end-->
+  </nav>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-
-          <a class="nav-link" href="about.html">About</a>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Services
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/services.html">Stationary</a>
-            <a class="dropdown-item" href="/services.html">Xerox</a>
-            <a class="dropdown-item" href="/services.html">Books/thesis</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/services.html">Something else here</a>
-          </div>
-        </li>
-        <li class="nav-item">
-
-          <a class="nav-link" href="/contact.html">Contact Us</a>
-        </li>
-
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+  <div class="carousel slide" data-bs-ride="carousel" id="aa">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#aa" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#aa" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#aa" data-bs-slide-to="2"></button>
     </div>
-  </nav><!--nav end-->
 
-  <div class="alert alert-success alert-dismissible fade show" role="alert">
-    <strong>Semester End Sale!</strong> You can now print your thesis for only Rs 200.
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">×</span>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="4000">
+
+        <img src="https://www.stationerybazaar.com/images/pzen_slideshow/back-school-concept_1623598730.jpg"
+          class="w-100" style="height
+        :650px" alt="...">
+        <div class="carousel-caption">
+          <h1 class="text-center ch1" style="color:yellowgreen">WIDEST RANGE OF PRODUCT</h1>
+        </div><!--carousel-caption-->
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+
+        <img
+          src="https://www.stationerybazaar.com/images/pzen_slideshow/colorful-stationery-multicolored-background_1623598949.jpg"
+          class="w-100" alt="..." style="height:650px">
+        <div class="carousel-caption">
+          <h1 class="text-center ch1" style="color:#FF4E50">OFFICE PRODUCTS<br> SALE OFF TO 50%</h1>
+        </div><!--carousel-caption-->
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+
+        <img src="image/im.jpg" class="w-100" alt="..." style="height:650px">
+        <div class="carousel-caption">
+          <h1 class="text-center ch1" style="color:orange">WIDE RANGE OF ART <br>PRODUCT</h1>
+        </div><!--carousel-caption-->
+      </div>
+    </div><!--carousel-inner-->
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#aa" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#aa" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
     </button>
   </div>
-
-  <div class="container mt-3">
-    <div class="jumbotron">
-      <h1 class="display-4">Welcome to Shiv Stationary!</h1>
-      <p class="lead"> Here get every stationary items at a affordable prices.</p>
-      <hr class="my-4">
-      <a class="btn btn-primary btn-lg"
-        href="https://www.google.com/maps/place/SitaRam+Stationers/@28.6581009,77.2124626,12.5z/data=!4m8!1m2!2m1!1sstationery+delhi!3m4!1s0x390cfd309eebec89:0x25106b00b8ccb6b3!8m2!3d28.5684963!4d77.2430644"
-        target="_blank" role="button">View On Google Maps</a>
-    </div>
-  </div><!--jumbotron end-->
-
+  <!--slider div end-->
+  <br>
+  <br>
   <div class="container">
     <div class="row">
       <div class="col-md-4 text-center">
@@ -143,29 +203,35 @@ book binding
           src="https://media.istockphoto.com/id/490658849/photo/office-tools.jpg?s=612x612&w=0&k=20&c=ObLmefishVUSs3a4-e8xGpzAGkrSCZO1zoVjVQjWaBk="
           class="bd-placeholder-img rounded-circle" width="140" height="140" />
         <h2>Buy Crayons</h2>
-        <p style="text-align: justify;">Manipulating crayons improves a child's dexterity and fine motor skills. Coloring improves hand-eye
+        <p style="text-align: justify;">Manipulating crayons improves a child's dexterity and fine motor skills.
+          Coloring improves hand-eye
           coordination, which is essential in learning to write letters. Kids learn about force with crayons. A mark can
-          be light or very dark depending on the amount of pressure they use when they draw. </p>
-        <p><a class="btn btn-primary" href="#" role="button">View details »</a></p>
+          be light or very dark depending on the amount of pressure they use when they draw. 
+          
+      </p>
+        <p><a class="btn btn-danger " href="#" role="button">View details »</a></p>
       </div>
       <div class="col-md-4 text-center">
         <img
           src="https://media.istockphoto.com/id/485725200/photo/school-and-office-accessories-on-wooden-background.jpg?s=612x612&w=0&k=20&c=PWgiIA-7_QDC_PXnEhwZqDLDDzrNMIxxJjBeD4h4oLM="
           class="bd-placeholder-img rounded-circle" width="140" height="140" />
         <h2>Buy Classmate copies</h2>
-        <p style="text-align: justify;">Classmate is an Indian brand of student stationery products.Classmate added pens,pencils,mechanical pencils
-          and geometry boxes to its portfolio.It uses eco-friendly and elemental chlorine-free paper. </p>
-        <p><a class="btn btn-primary" href="#" role="button">View details »</a></p>
+        <p style="text-align: justify;">Classmate is an Indian brand of student stationery products.Classmate added
+          pens,pencils,mechanical pencils
+          and geometry boxes to its portfolio.It uses eco-friendly and elemental chlorine-free paper.it will help you to
+          give better writing experience. </p>
+        <p><a class="btn btn-danger" href="#" role="button">View details »</a></p>
       </div>
       <div class="col-md-4 text-center">
         <img src="https://s3.envato.com/files/340217945/AS6945.jpg" class="bd-placeholder-img rounded-circle"
           width="140" height="140" />
         <h2>Get Your Books Printed</h2>
-        <p style="text-align: justify;">Print books have the feel of a book that many readers love. You can hold it, turn the pages, and feel the
+        <p style="text-align: justify;">Print books have the feel of a book that many readers love. You can hold it,
+          turn the pages, and feel the
           paper.People who love to read spend a lifetime acquiring books. They may find it wrenching to abandon their
           shelves
           of books for a single slab of plastic.</p>
-        <p><a class="btn btn-primary" href="#" role="button">View details »</a></p>
+        <p><a class="btn btn-danger" href="#" role="button">View details »</a></p>
       </div>
     </div>
 
@@ -198,7 +264,7 @@ book binding
                           <img src="https://www.stationeryhut.in/image/cache/data/glue-228x228.jpg" alt="">
                         </a>
                         <div class="name">
-                          <a href="" style="color: black;">Adhesives & Glues</a>
+                          <a href="" style="color: black;text-decoration: none;">Adhesives & Glues</a>
                         </div>
                       </div>
                       <div class="col-sm-3">
@@ -206,7 +272,7 @@ book binding
                           <img src="https://www.stationeryhut.in/image/cache/data/calculators-228x228.jpg" alt="">
                         </a>
                         <div class="name">
-                          <a href="" style="color: black;">Calculators</a>
+                          <a href="" style="color: black; text-decoration: none;">Calculators</a>
                         </div>
                       </div>
                       <div class="col-sm-3">
@@ -214,7 +280,7 @@ book binding
                           <img src="https://www.stationeryhut.in/image/cache/data/misclleneous-228x228.jpg" alt="">
                         </a>
                         <div class="name">
-                          <a href="" style="color: black;">Miscellaneous Stationery </a>
+                          <a href="" style="color: black;text-decoration: none;">Miscellaneous Stationery </a>
                         </div>
                       </div>
                       <div class="col-sm-3">
@@ -222,7 +288,7 @@ book binding
                           <img src="https://www.stationeryhut.in/image/cache/data/paper-clips-228x228.jpg" alt="">
                         </a>
                         <div class="name">
-                          <a href="" style="color: black;">Paper Clips </a>
+                          <a href="" style="color: black; text-decoration: none;">Paper Clips </a>
                         </div>
                       </div>
                       <div class="col-sm-3">
@@ -230,7 +296,7 @@ book binding
                           <img src="https://www.stationeryhut.in/image/cache/data/cutters-228x228.jpg" alt="">
                         </a>
                         <div class="name">
-                          <a href="" style="color: black;">Paper Cutters</a>
+                          <a href="" style="color: black; text-decoration: none;">Paper Cutters</a>
                         </div>
                       </div>
                       <div class="col-sm-3">
@@ -238,7 +304,7 @@ book binding
                           <img src="https://www.stationeryhut.in/image/cache/data/punches-228x228.jpg" alt="">
                         </a>
                         <div class="name">
-                          <a href="" style="color: black;">Paper Punches (5) </a>
+                          <a href="" style="color: black;text-decoration: none;">Paper Punches </a>
                         </div>
                       </div>
                       <div class="col-sm-3">
@@ -246,7 +312,7 @@ book binding
                           <img src="https://www.stationeryhut.in/image/cache/data/scissors-228x228.jpg" alt="">
                         </a>
                         <div class="name">
-                          <a href="" style="color: black;">Scissors (8) </a>
+                          <a href="" style="color: black; text-decoration: none;">Scissors </a>
                         </div>
                       </div>
                       <div class="col-sm-3">
@@ -254,7 +320,7 @@ book binding
                           <img src="https://www.stationeryhut.in/image/cache/data/staplers-228x228.png" alt="">
                         </a>
                         <div class="name">
-                          <a href="" style="color: black;">Staplers, Removers</a>
+                          <a href="" style="color: black; text-decoration: none;">Staplers, Removers</a>
                         </div>
                       </div>
                       <div class="col-sm-3">
@@ -262,7 +328,7 @@ book binding
                           <img src="https://www.stationeryhut.in/image/cache/data/sticky-notes-228x228.jpg" alt="">
                         </a>
                         <div class="name">
-                          <a href="" style="color: black;">Sticky Notes </a>
+                          <a href="" style="color: black; text-decoration: none;">Sticky Notes </a>
                         </div>
                       </div>
                       <div class="col-sm-3">
@@ -270,7 +336,7 @@ book binding
                           <img src="https://www.stationeryhut.in/image/cache/data/tapes-228x228.jpg" alt="">
                         </a>
                         <div class="name">
-                          <a href="" style="color: black;">Tapes</a>
+                          <a href="" style="color: black; text-decoration: none;">Tapes</a>
                         </div>
                       </div>
                     </div>
@@ -283,6 +349,7 @@ book binding
       </div>
     </div>
   </div><!--content end-->
+  <button id="scrollbtn" onclick="topscroll()" title="Back to top"><i class="fas fa-arrow-up"></i></button>
 
   <footer class="py-3 bg-dark text-light">
     <div class="footer-main">
@@ -291,7 +358,7 @@ book binding
           <div class="col-md-3">
             <div class="footer-desc">
               <div class="logo-footer">
-                <a href="" style="color: aliceblue;">Shiv Stationary</a>
+                <a href="" style="color: aliceblue; text-decoration: none;">Shiv Stationary</a>
                 <p>Stationery refers to commercially manufactured writing materials, including cut paper, envelopes,
                   writing implements, continuous form paper, and other office supplies.</p>
               </div>
@@ -302,10 +369,10 @@ book binding
               <h4>Quick Links</h4>
               <ul>
                 <li>
-                  <a href="about.html" style="color: aliceblue; " >About us</a>
+                  <a href="about.html" style="color: aliceblue;text-decoration: none; ">About us</a>
                 </li>
                 <li>
-                  <a href="contact.html" style="color: aliceblue;">Contact</a>
+                  <a href="contact.html" style="color: aliceblue; text-decoration: none;">Contact</a>
                 </li>
               </ul>
             </div>
@@ -319,7 +386,7 @@ book binding
                     <span class="media-icon">
                       <i class="fa-brands fa-facebook" style="color: aliceblue;"></i>
                     </span>
-                    <span class="media-name" style="color: aliceblue;">Facebook</span>
+                    <span class="media-name" style="color: aliceblue; text-decoration: none;">Facebook</span>
                   </a>
                 </li>
                 <li class="smedia-02">
@@ -327,7 +394,7 @@ book binding
                     <span class="media-icon">
                       <i class="fa-brands fa-twitter" style="color: aliceblue;"></i>
                     </span>
-                    <span style="color: aliceblue;">Twitter</span>
+                    <span style="color: aliceblue; text-decoration: none;">Twitter</span>
                   </a>
                 </li>
                 <li class="smedia-03">
@@ -335,7 +402,7 @@ book binding
                     <span class="media-icon">
                       <i class="fa-brands fa-square-instagram" style="color: aliceblue;"></i>
                     </span>
-                    <span class="media-name" style="color: aliceblue;">Instagram</span>
+                    <span class="media-name" style="color: aliceblue;text-decoration: none;">Instagram</span>
                   </a>
                 </li>
               </ul>
@@ -343,6 +410,7 @@ book binding
           </div>
           <div class="col-md-3">
             <div class="footer-contact">
+
               <h4>Contact</h4>
               <p>Shiv Stationary is located in J 5, Central Market, Block J, Lajpat Nagar II, Lajpat Nagar Part -2, New
                 Delhi, Delhi 110024</p>
@@ -353,7 +421,7 @@ book binding
               <p>
                 <i class="fa fa-envelope"></i>
                 E-mail:
-                <a href="" style="color: aliceblue;">stationary@shiv.com</a>
+                <a href="" style="color: aliceblue; text-decoration: none;">stationary@shiv.com</a>
               </p>
             </div>
           </div>
@@ -364,21 +432,54 @@ book binding
       <div class="container">
         <p class="text-center">
           Copyright © 2022 - Design & Developed by
-          <a href="" style="color: aliceblue;">Shubham Sharma</a>            
+          <a href="" style="color: aliceblue;text-decoration: none;">Shubham Sharma</a>
         </p>
       </div>
     </div>
   </footer><!--footer end-->
 
+<!-- <script> 
+    function validate(){
+    var username = document.getElementById("username").value;
+     var userpass = document.getElementById("userpass").value;
+     if(username.trim()==""|| userpass.trim()==""){
+      alert("Please enter username and password");
+      return false;
+     }
+     else{
+      return true;
+     }
+     
+     
+    }
+  </script> -->
+     
+  <script type="text/javascript">
+
+    let preloader = document.getElementById('loading');
+
+    function myFun() {
+      preloader.style.display = 'none';
+    }
+    $(document).ready(function () {
+      $('#pn12').modal('show')
+    })
 
 
-
-
-
-
-
-
-
+  </script>
+  <script>
+    let mybutton = document.getElementById("scrollbtn")
+    window.onscroll = function () {
+      showbtn()
+    }
+    function showbtn() {
+      if (document.body.scrollbtn > 400 || document.documentElement.scrollbtn > 400) {
+        mybutton.style.display = "block";
+      } else {
+        myButton.style.display = "none";
+      }
+    }
+  </script>
 
 </body>
 

@@ -20,57 +20,78 @@ book binding
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
   <link rel="stylesheet" href="css/service.css">
 
   <title>Services Provided By Shiv Stationary</title>
+  <style>
+     .fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.navbar{
+      background: black;
+    }
+    .weblogo {
+    align-items: center;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: 'prague';
+    margin-left: 25px;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.navbar-nav li a {
+    color: #fff!important;
+    font-weight: 600;
+    font-size: 18px;
+}
+a{
+    text-decoration: none;
+}
+  </style>
 </head>
 
 <body>
   <!-- our code starts here -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="/">Shiv Stationary</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-
-          <a class="nav-link" href="/about.html">About</a>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Services
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/services.html">Stationary</a>
-            <a class="dropdown-item" href="/services.html">Xerox</a>
-            <a class="dropdown-item" href="/services.html">Book/thesis</a>
-
-          </div>
-        </li>
-        <li class="nav-item">
-
-          <a class="nav-link" href="/contact.html">Contact Us</a>
-        </li>
-
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
+  <nav class="navbar navbar-dark navbar-expand-md fixed-top">
+    <div class="container-fluid">
+      <div class="row">
+        <a href="" class="navbar-brand">
+          <h1 class="animated infinite heartBeat weblogo">Shiv Stationary</h1>
+        </a>
+      </div>
+      <!--mobile view-->
+      <button class="navbar-toggler collapsed" data-bs-target="#a" data-bs-toggle="collapse" aria-expanded="false">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--mobile view end-->
+      <!--menu  -->
+      <div class="navbar-collapse collapse" id="a" style="">
+        <ul class="navbar-nav ms-auto ">
+          <li><a href="index.html" class="nav-link">HOME</a></li>
+          <li><a href="about.html" class="nav-link">ABOUT</a></li>
+          <li><a href="services.html" class="nav-link">OUR SERVICE</a></li>
+          <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+          <li><a href="limited edition.html" class="nav-link">LIMITED EDITION</a></li>
+          <li><a href="login.html" class="nav-link">LOGIN</a></li>
+        </ul>
+      </div>
+      <!--menu end-->
+    </div><!-- container-fluid end-->
   </nav><!--nav end-->
+  <br><br><br>
 
   <div class="container-fluid">
     <div class="container">
@@ -87,9 +108,10 @@ book binding
             collection of books.The Stationers' Company formerly held a monopoly over the publishing industry in
             England and was responsible for copyright regulations. items such as pen,pencil,copy,calculators etc.
           </p>
+          <a href="" class="btn btn-danger btn-lg shadow-lg" style="margin-bottom: 20px;">Order Now</a>
         </div>
         <div class="col-md-4 text-center">
-          <img src="image/y.png">
+          <img src="image/y.png" class="shadow-lg">
         </div>
       </div>
     </div>
@@ -102,7 +124,7 @@ book binding
     <br>
     <div class="row">
       <div class="col-lg-4 text-center">
-        <img src="image/l.jpeg">
+        <img src="image/l.jpeg" class="shadow-lg">
       </div>
       <div class="col-lg-8 text-left">
         <p class="xerox text-justify">
@@ -115,6 +137,7 @@ book binding
           photocopiers capable of heavy-duty handling cycles and large-format printing remain a costly option found
           primarily in print and design shops.
         </p>
+        <a href="" class="btn btn-danger btn-lg shadow-lg">Order Now</a>
       </div>
     </div>
   </div><!--container end-->
@@ -122,7 +145,7 @@ book binding
   <div class="container-fluid">
     <div class="container">
       <h2 class="text-center ml-1">
-        ALL UNIVERSITIES BOOKS
+        ALL UNIVERSITIES BOOKS AND THESIS
       </h2>
       <br>
       <div class="row">
@@ -135,13 +158,19 @@ book binding
             hand-held physical supports for extended written compositions or records, the codex replaces its
             predecessor, the scroll. A single sheet in a codex is a leaf and each side of a leaf is a page.
           </p>
+          <a href="" class="btn btn-danger btn-lg"
+            style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);margin-bottom: 20px;">
+            Order Now</a>
         </div>
         <div class="col-md-4 text-center">
-          <img src="https://www.asme.org/getmedia/c2c8ea5a-b690-4ba7-92bb-34bd1432862b/book_guide_hero_books.png?width=300&height=315&ext=.png">
+          <img
+            src="https://www.asme.org/getmedia/c2c8ea5a-b690-4ba7-92bb-34bd1432862b/book_guide_hero_books.png?width=300&height=315&ext=.png"
+            class="shadow-lg">
         </div>
       </div>
     </div>
   </div><!--container-fluid end-->
+
   <footer class="py-3 bg-dark text-light">
     <div class="footer-main">
       <div class="container">
@@ -149,7 +178,7 @@ book binding
           <div class="col-md-3">
             <div class="footer-desc">
               <div class="logo-footer">
-                <a href="" class="pen">Shiv Stationary</a>
+                <a href="" class="pen" style="text-decoration: none;">Shiv Stationary</a>
                 <p>Stationery refers to commercially manufactured writing materials, including cut
                   paper, envelopes,
                   writing implements, continuous form paper, and other office supplies.</p>
@@ -161,10 +190,10 @@ book binding
               <h4>Quick Links</h4>
               <ul>
                 <li>
-                  <a href="about.html">About us</a>
+                  <a href="about.html" style="text-decoration: none;">About us</a>
                 </li>
                 <li>
-                  <a href="contact.html">Contact</a>
+                  <a href="contact.html" style="text-decoration: none;">Contact</a>
                 </li>
               </ul>
             </div>
@@ -213,7 +242,7 @@ book binding
               <p>
                 <i class="fa fa-envelope"></i>
                 E-mail:
-                <a href="" class="pen">stationary@shiv.com</a>
+                <a href="" class="pen" style="text-decoration: none;">stationary@shiv.com</a>
               </p>
             </div>
           </div>
@@ -224,7 +253,7 @@ book binding
       <div class="container">
         <p class="text-center">
           Copyright © 2022 - Design & Developed by
-          <a href="" class="pen">Shubham Sharma</a>
+          <a href="" class="pen" style="text-decoration: none;">Shubham Sharma</a>
         </p>
       </div>
     </div>
